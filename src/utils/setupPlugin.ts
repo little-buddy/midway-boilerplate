@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { IMidwayContainer } from '@midwayjs/core';
 import * as axios from '@midwayjs/axios';
 
 export const setupAxios = async (container: IMidwayContainer) => {
   // 配置 全局axios
+  // @ts-ignore
   const httpService = await container.getAsync(axios.HttpService);
   // 配置 自定义zxios key根据自定义
   const httpServiceFactory = await container.getAsync(axios.HttpServiceFactory);
+  // @ts-ignore
   const customAxios = httpServiceFactory.get('customAxios');
   /*
     配置
