@@ -5,6 +5,7 @@ import * as koa from '@midwayjs/koa';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
 import * as i18n from '@midwayjs/i18n';
+import * as swagger from '@midwayjs/swagger';
 
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
@@ -22,6 +23,8 @@ import { setupAxios, setupI18n } from '@/utils/setupPlugin';
     },
     axios,
     i18n,
+    // see http://127.0.0.1:7001/swagger-ui/index.html
+    swagger,
   ],
   importConfigs: [join(__dirname, './config')],
 })

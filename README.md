@@ -43,3 +43,28 @@ const result = await makeHttpRequest(url,{
 
 还是用 axios 替换保险
 ```
+
+### swagger 修饰器列表
+
+```js
+@ApiBody
+@ApiExcludeEndpoint
+@ApiExcludeController
+@ApiHeader
+@ApiHeaders
+@ApiOperation
+@ApiProperty
+@ApiPropertyOptional
+@ApiResponseProperty
+@ApiQuery
+@ApiResponse
+@ApiTags
+@ApiExtension
+@ApiBasicAuth
+@ApiBearerAuth
+@ApiCookieAuth
+@ApiOAuth2
+@ApiSecurity
+@ApiParam
+@ApiExtraModel
+```

@@ -1,7 +1,9 @@
+import { ApiProperty } from '@midwayjs/swagger';
 import { Rule, RuleType } from '@midwayjs/validate';
 
 // See https://midwayjs.org/docs/extensions/validate
 export class UserDTO {
+  @ApiProperty({ example: '', description: '' }) /* swagger 文档声明 */
   @Rule(RuleType.number().required())
   id: number;
 
