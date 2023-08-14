@@ -48,4 +48,9 @@ export default {
   //     },
   //   },
   // },
+  // config jwt
+  jwt: {
+    secret: '',
+    expiresIn: '2d',
+  },
 } as MidwayConfig;
