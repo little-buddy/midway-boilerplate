@@ -6,4 +6,18 @@ export default {
   koa: {
     port: 7001,
   },
+
+  axios: {
+    default: {
+      /* 所有实例复用的配置 */
+    },
+    clients: {
+      default: {
+        /* 默认实例 */
+      },
+      customAxios: {
+        /* 自定义实例 */
+      },
+    },
+  },
 } as MidwayConfig;

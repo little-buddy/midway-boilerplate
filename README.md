@@ -25,5 +25,21 @@ $ npm start
 - Use `npm run lint` to check code style.
 - Use `npm test` to run unit test.
 
-
 [midway]: https://midwayjs.org
+
+### 简单的 HTTP 请求
+
+```JS
+import {makeHttpRequest} from "@midwayjs/core"
+
+const result = await makeHttpRequest(url,{
+  method: 请求类型
+  dataType: 返回数据类型
+  contentType: 发送数据类型, post 需要
+  data:{} get query
+  timeout 超时
+  headers
+})
+
+还是用 axios 替换保险
+```
