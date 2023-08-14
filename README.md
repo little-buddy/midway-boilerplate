@@ -1,4 +1,4 @@
-# my_midway_project
+# 基于 midway@3.0.0+ 搭建的快速开发模版
 
 ## QuickStart
 
