@@ -1,11 +1,12 @@
 import { join } from 'path';
-import { Configuration, App, IMidwayContainer } from '@midwayjs/core';
+import { Configuration, App, IMidwayContainer, Inject } from '@midwayjs/core';
 import * as axios from '@midwayjs/axios';
 import * as koa from '@midwayjs/koa';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
 import * as i18n from '@midwayjs/i18n';
 import * as swagger from '@midwayjs/swagger';
+import * as bull from '@midwayjs/bull';
 
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
@@ -25,12 +26,20 @@ import { setupAxios, setupI18n } from '@/utils/setupPlugin';
     i18n,
     // see http://127.0.0.1:7001/swagger-ui/index.html
     swagger,
+    // queueu
+    bull,
   ],
   importConfigs: [join(__dirname, './config')],
 })
 export class ContainerLifeCycle {
   @App()
   app: koa.Application;
+
+  @App('bull')
+  bullApp: bull.Application;
+
+  @Inject()
+  bullFramework: bull.Framework;
 
   async onReady(container: IMidwayContainer) {
     // add middleware

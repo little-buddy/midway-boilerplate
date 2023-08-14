@@ -35,3 +35,10 @@ export const setupI18n = mainConf => {
     > Query\Cookie\Header > i18n默认配置
    */
 };
+
+export const setupQueue = async mainConf => {
+  const queue = mainConf.bullFramework.getQueeu('test');
+  const job = await queue.runJob();
+  await job.process(); /* 获取进度 */
+  await job.getState(); /* 获取任务状态 */
+};

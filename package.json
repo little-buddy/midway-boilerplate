@@ -6,6 +6,7 @@
   "dependencies": {
     "@midwayjs/axios": "3",
     "@midwayjs/bootstrap": "^3.0.0",
+    "@midwayjs/bull": "3",
     "@midwayjs/core": "^3.0.0",
     "@midwayjs/decorator": "^3.0.0",
     "@midwayjs/i18n": "3",
