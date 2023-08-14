@@ -19,6 +19,7 @@
     "@midwayjs/swagger": "3",
     "@midwayjs/upload": "3",
     "@midwayjs/validate": "^3.0.0",
+    "dotenv": "^16.3.1",
     "swagger-ui-dist": "^5.3.2"
   },
   "devDependencies": {
