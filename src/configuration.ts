@@ -4,22 +4,24 @@ import * as axios from '@midwayjs/axios';
 import * as koa from '@midwayjs/koa';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
+import * as i18n from '@midwayjs/i18n';
 
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
 import { ReportMiddleware } from './middleware/report.middleware';
 
-import { setupAxios } from '@/utils/setupPlugin';
+import { setupAxios, setupI18n } from '@/utils/setupPlugin';
 
 @Configuration({
   imports: [
-    axios,
     koa,
     validate,
     {
       component: info,
       enabledEnvironment: ['local'],
     },
+    axios,
+    i18n,
   ],
   importConfigs: [join(__dirname, './config')],
 })
@@ -33,5 +35,6 @@ export class ContainerLifeCycle {
     // add filter
     // this.app.useFilter([NotFoundFilter, DefaultErrorFilter]);
     setupAxios(container);
+    setupI18n(this);
   }
 }

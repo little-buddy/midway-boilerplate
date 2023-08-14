@@ -6,7 +6,7 @@ export default {
   koa: {
     port: 7001,
   },
-
+  /* axios */
   axios: {
     default: {
       /* 所有实例复用的配置 */
@@ -18,6 +18,22 @@ export default {
       customAxios: {
         /* 自定义实例 */
       },
+    },
+  },
+  /* i18n */
+  i18n: {
+    localeTable: {
+      en_US: {
+        default: require('../locales/en_US'),
+      },
+      zh_CN: {
+        default: require('../locales/zh_CN'),
+      },
+    },
+    resolver: {
+      // query:
+      // cookie:
+      // accept-language:
     },
   },
 } as MidwayConfig;
