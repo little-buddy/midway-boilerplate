@@ -7,6 +7,7 @@ import * as info from '@midwayjs/info';
 import * as i18n from '@midwayjs/i18n';
 import * as swagger from '@midwayjs/swagger';
 import * as bull from '@midwayjs/bull';
+import * as cron from '@midwayjs/cron';
 
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
@@ -28,6 +29,7 @@ import { setupAxios, setupI18n } from '@/utils/setupPlugin';
     swagger,
     // queueu
     bull,
+    cron,
   ],
   importConfigs: [join(__dirname, './config')],
 })
@@ -48,5 +50,9 @@ export class ContainerLifeCycle {
     // this.app.useFilter([NotFoundFilter, DefaultErrorFilter]);
     setupAxios(container);
     setupI18n(this);
+  }
+
+  async onServerReady() {
+    // 启动任何
   }
 }

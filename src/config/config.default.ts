@@ -36,4 +36,16 @@ export default {
       // accept-language:
     },
   },
+  /*
+    配置 cron 日志
+   */
+  // midwayLogger: {
+  //   // ...
+  //   clients: {
+  //     // ...
+  //     cronLogger: {
+  //       fileLogName: 'midway-cron.log',
+  //     },
+  //   },
+  // },
 } as MidwayConfig;

@@ -8,6 +8,7 @@
     "@midwayjs/bootstrap": "^3.0.0",
     "@midwayjs/bull": "3",
     "@midwayjs/core": "^3.0.0",
+    "@midwayjs/cron": "^3.12.0",
     "@midwayjs/decorator": "^3.0.0",
     "@midwayjs/i18n": "3",
     "@midwayjs/info": "^3.0.0",
