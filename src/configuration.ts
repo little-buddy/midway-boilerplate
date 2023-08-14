@@ -9,6 +9,8 @@ import * as swagger from '@midwayjs/swagger';
 import * as bull from '@midwayjs/bull';
 import * as cron from '@midwayjs/cron';
 import * as jwt from '@midwayjs/jwt';
+import * as security from '@midwayjs/security';
+import * as upload from '@midwayjs/upload';
 
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
@@ -32,6 +34,8 @@ import { setupAxios, setupI18n } from '@/utils/setupPlugin';
     bull,
     cron,
     jwt,
+    security,
+    upload,
   ],
   importConfigs: [join(__dirname, './config')],
 })
