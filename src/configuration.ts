@@ -17,6 +17,9 @@ import * as upload from '@midwayjs/upload';
 import { ReportMiddleware } from './middleware/report.middleware';
 
 import { setupAxios, setupI18n } from '@/utils/setupPlugin';
+import setupEnv from '@/utils/setupEnv';
+
+setupEnv();
 
 @Configuration({
   imports: [
