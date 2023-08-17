@@ -17,10 +17,12 @@
     "@midwayjs/logger": "^2.14.0",
     "@midwayjs/security": "3",
     "@midwayjs/swagger": "3",
+    "@midwayjs/typeorm": "3",
     "@midwayjs/upload": "3",
     "@midwayjs/validate": "^3.0.0",
     "dotenv": "^16.3.1",
-    "swagger-ui-dist": "^5.3.2"
+    "swagger-ui-dist": "^5.3.2",
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@midwayjs/cli": "^2.0.0",
