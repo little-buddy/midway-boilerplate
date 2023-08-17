@@ -12,10 +12,10 @@ const isEnvProduction = process.env.NODE_ENV === 'production';
 dotEnv.config({
   path: `${pathsDotenv}.${isEnvProduction ? 'production' : 'development'}`,
 });
-
 dotEnv.config({
   path: pathsDotenv,
 });
+// **************************************************
 
 /* run -> */
 Bootstrap.run();
